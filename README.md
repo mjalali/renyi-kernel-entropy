@@ -2,7 +2,8 @@
 
 [Paper: An Information-Theoretic Evaluation of Generative Models in Learning Multi-modal Distributions]()
 
-Mohammad Jalai <sup>1*</sup>, Cheuk Ting Li <sup>2</sup>, Farzan Farnia <sup>2</sup>
+[Mohammad Jalai](https://mjalali.github.io/) <sup>1*</sup>, [Cheuk Ting Li](https://www.ie.cuhk.edu.hk/faculty/li-cheuk-ting/) <sup>2</sup>,
+[Farzan Farnia](https://www.cse.cuhk.edu.hk/people/faculty/farzan-farnia/) <sup>2</sup>
 
 <sup>1</sup> <sub>Department of Electrical and computer engineering, **Isfahan University of Technology**</sub>
 
