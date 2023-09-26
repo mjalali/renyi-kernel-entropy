@@ -13,7 +13,6 @@
 
 ## 1. Background
 
----
 ### Abstract
 The evaluation of generative models has received significant attention in the machine learning community.
 When applied to a multi-modal distribution which is common among image datasets, an intuitive evaluation criterion is the number of modes captured by the generative model. 
@@ -31,7 +30,7 @@ In this work, we propose an information-theoretic diversity evaluation method fo
 
 #### Toy example: Gaussian Distributions
 <p align="center">
-    <img src=assets/figures/gaussians-gans.png width="500"> 
+    <img src=assets/figures/gaussians-gans.png> 
 </p>
 
 #### Evaluation of Generative Models
@@ -40,7 +39,6 @@ In this work, we propose an information-theoretic diversity evaluation method fo
 
 ## 2. Usage
 
----
 ### Installation
 
 Using PIP or conda
