@@ -5,9 +5,10 @@
 Mohammad Jalai <sup>1*</sup>, Cheuk Ting Li <sup>2</sup>, Farzan Farnia <sup>2</sup>
 
 <sup>1</sup> <sub>Department of Electrical and computer engineering, Isfahan University of Technology</sub>
+
 <sup>2</sup> <sub>Department of Computer Science and Engineering, The Chinese University of Hong Kong</sub>
 
-<sub>**Work done at The Chinese University of Hong Kong**</sub>
+<sub>* Work done during an internship at CUHK</sub>
 
 ## 1. Background
 
@@ -21,9 +22,18 @@ In this work, we propose an information-theoretic diversity evaluation method fo
 ### R'enyi Kernel Entropy Mode Count (RKE) and Relative R'enyi Kernel Entropy (RRKE)
 
 #### Formulation
-<a href="https://latex.codecogs.com/svg.image?\mathrm{RKE}_2(\mathbf{X})=-\log\Bigl(\mathbb{E}_{X,X'\stackrel{\mathrm{iid}}{\sim}P_X}\bigl[k^2(\mathbf{X},\mathbf{X}')\bigr]\Bigr)\mathrm{RKE}_2(\mathbf{X})=\,-\log\biggl(\frac{1}{n^2}\sum_{i=1}^{n}\sum_{j=1}^{n}k^2(\mathbf{x}_i,\mathbf{x}_j)\biggr)" target="_blank"><img src="https://latex.codecogs.com/svg.image?\mathrm{RKE}_2(\mathbf{X})=-\log\Bigl(\mathbb{E}_{X,X'\stackrel{\mathrm{iid}}{\sim}P_X}\bigl[k^2(\mathbf{X},\mathbf{X}')\bigr]\Bigr)\mathrm{RKE}_2(\mathbf{X})=\,-\log\biggl(\frac{1}{n^2}\sum_{i=1}^{n}\sum_{j=1}^{n}k^2(\mathbf{x}_i,\mathbf{x}_j)\biggr)" title="RKE_2(X)" /></a>
-#### Toy example: Gaussian Distributions
 
+<a href="https://latex.codecogs.com/svg.image?\mathrm{RKE}_2(\mathbf{X})=-\log\Bigl(\mathbb{E}_{X,X'\stackrel{\mathrm{iid}}{\sim}P_X}\bigl[k^2(\mathbf{X},\mathbf{X}')\bigr]\Bigr)=\,-\log\biggl(\frac{1}{n^2}\sum_{i=1}^{n}\sum_{j=1}^{n}k^2(\mathbf{x}_i,\mathbf{x}_j)\biggr)" target="_blank"><img src="https://latex.codecogs.com/svg.image?\mathrm{RKE}_2(\mathbf{X})=-\log\Bigl(\mathbb{E}_{X,X'\stackrel{\mathrm{iid}}{\sim}P_X}\bigl[k^2(\mathbf{X},\mathbf{X}')\bigr]\Bigr)=\,-\log\biggl(\frac{1}{n^2}\sum_{i=1}^{n}\sum_{j=1}^{n}k^2(\mathbf{x}_i,\mathbf{x}_j)\biggr)" title="RKE_2(X)" /></a>
+
+<a href="https://latex.codecogs.com/svg.image?\widehat{\mathrm{RRKE}}_{\frac{1}{2}}(\mathbf{X},\mathbf{Y})=-\log\Bigl(\bigl\Vert&space;K_{XY}\bigr\Vert^{2}_{\mathrm{nuc}}\Bigr)" target="_blank"><img src="https://latex.codecogs.com/svg.image?\widehat{\mathrm{RRKE}}_{\frac{1}{2}}(\mathbf{X},\mathbf{Y})=-\log\Bigl(\bigl\Vert&space;K_{XY}\bigr\Vert^{2}_{\mathrm{nuc}}\Bigr)" title="RKE_2(X)" /></a>
+
+
+#### Toy example: Gaussian Distributions
+<p align="center">
+    <img src=assets/figures/gaussians-gans.png width="500"> 
+</p>
+
+#### Evaluation of Generative Models
 
 
 
