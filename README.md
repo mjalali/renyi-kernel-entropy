@@ -4,9 +4,9 @@
 
 Mohammad Jalai <sup>1*</sup>, Cheuk Ting Li <sup>2</sup>, Farzan Farnia <sup>2</sup>
 
-<sup>1</sup> <sub>Department of Electrical and computer engineering, Isfahan University of Technology</sub>
+<sup>1</sup> <sub>Department of Electrical and computer engineering, **Isfahan University of Technology**</sub>
 
-<sup>2</sup> <sub>Department of Computer Science and Engineering, The Chinese University of Hong Kong</sub>
+<sup>2</sup> <sub>Department of Computer Science and Engineering, **The Chinese University of Hong Kong**</sub>
 
 <sub>* Work done during an internship at CUHK</sub>
 
