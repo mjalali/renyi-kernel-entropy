@@ -41,9 +41,11 @@ In this work, we propose an information-theoretic diversity evaluation method fo
 
 ### Installation
 
-Using PIP or conda
+Using PIP
 
-> pip/conda install rke
+```shell
+pip install rke
+```
 
 Manually
 > git clone https://github.com/mjalali/renyi-kernel-entropy-score
