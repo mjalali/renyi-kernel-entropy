@@ -1,13 +1,11 @@
 # RKE score
 
-[Paper: An Information-Theoretic Evaluation of Generative Models in Learning Multi-modal Distributions]()
+[Paper: An Information-Theoretic Evaluation of Generative Models in Learning Multi-modal Distributions](https://neurips.cc/virtual/2023/poster/71754)
 
 [Mohammad Jalai](https://mjalali.github.io/) <sup>1*</sup>, [Cheuk Ting Li](https://www.ie.cuhk.edu.hk/faculty/li-cheuk-ting/) <sup>2</sup>,
 [Farzan Farnia](https://www.cse.cuhk.edu.hk/people/faculty/farzan-farnia/) <sup>2</sup>
 
-<sup>1</sup> <sub>Department of Electrical and computer engineering, **Isfahan University of Technology**</sub>
-
-<sup>2</sup> <sub>Department of Computer Science and Engineering, **The Chinese University of Hong Kong**</sub>
+<sup>1</sup> <sub>**Isfahan University of Technology (IUT)**</sub>, <sup>2</sup> <sub>**The Chinese University of Hong Kong (CUHK)**</sub>
 
 <sub>* Work done during an internship at CUHK</sub>
 
@@ -30,7 +28,7 @@ In this work, we propose an information-theoretic diversity evaluation method fo
 
 #### Toy example: Gaussian Distributions
 <p align="center">
-    <img src=assets/figures/gaussians-gans.png> 
+    <img src=https://github.com/mjalali/renyi-kernel-entropy/tree/main/assets/figures/gaussians-gans.png> 
 </p>
 
 #### Evaluation of Generative Models
@@ -48,8 +46,10 @@ pip install rke
 ```
 
 Manually
-> git clone https://github.com/mjalali/renyi-kernel-entropy-score
-> python setup.py install
+```shell
+git clone https://github.com/mjalali/renyi-kernel-entropy-score
+python setup.py install
+```
 
 ### Example
 

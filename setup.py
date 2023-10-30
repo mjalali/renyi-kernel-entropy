@@ -1,11 +1,12 @@
-from setuptools import find_packages, setup
+from setuptools import setup
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
     name="rke-score",
-    version="0.1",
+    py_modules=["rke_score"],
+    version="0.0.4",
     author="",
     autor_email="mjalali0079@gmail.com",
     description="Compute Renyi Kernel Entropy scores (RKE-MC and RRKE) for two sets of vectors.",
