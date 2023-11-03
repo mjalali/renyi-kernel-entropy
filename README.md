@@ -79,3 +79,13 @@ You can evaluate your model using different feature extractors (mostly used: inc
 
 
 ## 3. Cite our work
+```shell
+@inproceedings{
+jalali2023an,
+title={An Information-Theoretic Evaluation of Generative Models in Learning Multi-modal Distributions},
+author={Mohammad Jalali and Cheuk Ting Li and Farzan Farnia},
+booktitle={Thirty-seventh Conference on Neural Information Processing Systems},
+year={2023},
+url={https://openreview.net/forum?id=PdZhf6PiAb}
+}
+```
