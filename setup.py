@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 setup(
     name="rke-score",
     packages=['rke_score'],
-    version="0.0.5",
+    version="0.0.6",
     author="",
     autor_email="mjalali0079@gmail.com",
     description="Compute Renyi Kernel Entropy scores (RKE-MC and RRKE) for two sets of vectors.",
