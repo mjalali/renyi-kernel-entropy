@@ -1,6 +1,6 @@
 # RKE score
 
-[Paper: An Information-Theoretic Evaluation of Generative Models in Learning Multi-modal Distributions](https://neurips.cc/virtual/2023/poster/71754)
+[Paper: An Information-Theoretic Evaluation of Generative Models in Learning Multi-modal Distributions](https://openreview.net/forum?id=PdZhf6PiAb)
 
 [Mohammad Jalai](https://mjalali.github.io/) <sup>1*</sup>, [Cheuk Ting Li](https://www.ie.cuhk.edu.hk/faculty/li-cheuk-ting/) <sup>2</sup>,
 [Farzan Farnia](https://www.cse.cuhk.edu.hk/people/faculty/farzan-farnia/) <sup>2</sup>
@@ -55,7 +55,7 @@ python setup.py install
 
 ```python
 import numpy as np
-from rke import RKE
+from rke_score import RKE
 
 
 num_real_samples = num_fake_samples = 10000
@@ -79,13 +79,13 @@ You can evaluate your model using different feature extractors (mostly used: inc
 
 
 ## 3. Cite our work
-```shell
+```text
 @inproceedings{
-jalali2023an,
-title={An Information-Theoretic Evaluation of Generative Models in Learning Multi-modal Distributions},
-author={Mohammad Jalali and Cheuk Ting Li and Farzan Farnia},
-booktitle={Thirty-seventh Conference on Neural Information Processing Systems},
-year={2023},
-url={https://openreview.net/forum?id=PdZhf6PiAb}
+    jalali2023rke,
+    title={An Information-Theoretic Evaluation of Generative Models in Learning Multi-modal Distributions},
+    author={Mohammad Jalali and Cheuk Ting Li and Farzan Farnia},
+    booktitle={Thirty-seventh Conference on Neural Information Processing Systems},
+    year={2023},
+    url={https://openreview.net/forum?id=PdZhf6PiAb}
 }
 ```
