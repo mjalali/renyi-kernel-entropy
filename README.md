@@ -39,16 +39,16 @@ In this work, we propose an information-theoretic diversity evaluation method fo
 
 ### Installation
 
-Using PIP
+Using PyPi
 
 ```shell
-pip install rke
+pip install rke-score
 ```
 
 Manually
 ```shell
 git clone https://github.com/mjalali/renyi-kernel-entropy-score
-python setup.py install
+pip install -e .
 ```
 
 ### Example
@@ -70,8 +70,8 @@ fake_features = np.random.normal(loc=0.0, scale=1.0,
 kernel = RKE(kernel_bandwidth=[0.2, 0.3, 0.4])
 
 
-print(kernel.compute_rke_mc)
-print(kernel.compute_rrke)
+print(kernel.compute_rke_mc(fake_features))
+print(kernel.compute_rrke(real_features, fake_features))
 ```
 
 ### Guide to evaluate your model

@@ -19,6 +19,23 @@ def gaussian_kernel(x, y, sigma):
     return kernel
 
 
+def bandwidth_decorator(function):
+    """
+    This decorator is only for RKE class is used when the `kernel_bandwidth` is a list.
+    """
+    def wrap_bandwidth_list(self, *args, **kwargs):
+        output = {}
+        if self.kernel_bandwidth is not None:  # Gaussian kernel
+            for bandwidth in self.kernel_bandwidth:
+                self.kernel_function = partial(gaussian_kernel, sigma=bandwidth)
+                output[bandwidth] = function(self, *args, **kwargs)
+        else:  # Specified kernel
+            return function(self, *args, **kwargs)
+
+        return output
+    return wrap_bandwidth_list
+
+
 class RKE:
     def __init__(self, kernel_bandwidth=None, kernel_function=None):
         """
@@ -32,17 +49,30 @@ class RKE:
         """
         if kernel_function is None and kernel_bandwidth is None:
             raise ValueError('Expected either kernel_function or kernel_bandwidth args')
-        if kernel_function is None:
-            kernel_function = partial(gaussian_kernel, sigma=kernel_bandwidth)
-        self.kernel_function = kernel_function
+        if kernel_function is not None and kernel_bandwidth is not None:
+            raise ValueError('`kernel_function` is mutually exclusive with `kernel_bandwidth`')
 
-    def compute_rke_mc_frobenius_norm(self, X, **kwargs):
+        if kernel_function is None:  # Gaussian kernel
+            # Make `kernel_bandwidth` into a list if the input is float or int
+            if isinstance(kernel_bandwidth, (float, int)):
+                self.kernel_bandwidth = [kernel_bandwidth]
+            else:
+                self.kernel_bandwidth = kernel_bandwidth
+            self.kernel_function = partial(gaussian_kernel, sigma=self.kernel_bandwidth[0])
+
+        else:  # Specified kernel
+            self.kernel_bandwidth = None
+            self.kernel_function = kernel_function
+
+    @bandwidth_decorator
+    def compute_rke_mc_frobenius_norm(self, X):
         f_norm = 0
         for i in range(X.shape[0]):
             for j in range(X.shape[0]):
                 f_norm += self.kernel_function(X[i], X[j])**2
         return f_norm / X.shape[0]**2
 
+    @bandwidth_decorator
     def compute_rke_mc(self, X, n_samples=1_000_000):
         """
         Computing RKE-MC = exp(-RKE(X))
@@ -67,6 +97,7 @@ class RKE:
                 output[i][j] = self.kernel_function(X[i], Y[j])
         return output / np.sqrt(X.shape[0] * Y.shape[0])
 
+    @bandwidth_decorator
     def compute_rrke(self, X, Y, x_samples=500, y_samples=None):
         if y_samples is None:
             y_samples = x_samples
