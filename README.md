@@ -13,6 +13,7 @@
 
 ## 1. Background
 
+
 ### Abstract
 The evaluation of generative models has received significant attention in the machine learning community.
 When applied to a multi-modal distribution which is common among image datasets, an intuitive evaluation criterion is the number of modes captured by the generative model. 
