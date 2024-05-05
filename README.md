@@ -29,9 +29,7 @@ In this work, we propose an information-theoretic diversity evaluation method fo
 
 
 #### Toy example: Gaussian Distributions
-<p align="center">
-    <img src=https://github.com/mjalali/renyi-kernel-entropy/tree/main/assets/figures/gaussians-gans.png> 
-</p>
+![Gaussian_Distributions](./assets/figures/gaussians-gans.png)
 
 #### Evaluation of Generative Models
 
